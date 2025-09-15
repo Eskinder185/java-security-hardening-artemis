@@ -15,3 +15,4 @@ Data Integrity: SHA-256 hashing was used to verify the integrity of transmitted 
 Dependency Management: The OWASP Dependency-Check tool was utilized to identify and mitigate vulnerabilities in third-party libraries.
 Reflection
 This project demonstrated the importance of secure coding practices and proactive vulnerability management. By enhancing encryption, data integrity, and dependency management, we improved the overall security of Artemis Financial’s application and protected sensitive client information
+<img width="2507" height="1227" alt="image" src="https://github.com/user-attachments/assets/54a38c2d-04b4-44d5-9034-1ff376536d16" />
