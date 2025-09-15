@@ -1,0 +1,76 @@
+# Spring Boot Configuration for Artemis Financial
+# Security-hardened configuration with TLS/SSL and secure defaults
+
+server:
+  port: 8443
+  ssl:
+    enabled: true
+    key-store: classpath:keystore.p12
+    key-store-type: PKCS12
+    key-store-password: ${PASS:changeit}
+    key-alias: artemis-dev
+    enabled-protocols: TLSv1.2,TLSv1.3
+  servlet:
+    session:
+      cookie:
+        secure: true
+        http-only: true
+        same-site: strict
+      timeout: 30m
+  compression:
+    enabled: true
+    mime-types: text/html,text/xml,text/plain,text/css,text/javascript,application/javascript,application/json
+    min-response-size: 1024
+
+# Security Configuration
+spring:
+  security:
+    require-ssl: true
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+  jackson:
+    default-property-inclusion: non_null
+    serialization:
+      write-dates-as-timestamps: false
+  jpa:
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: false
+
+# Logging Configuration
+logging:
+  level:
+    org.springframework.security: INFO
+    org.springframework.web: INFO
+    com.snhu.sslserver: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+  file:
+    name: logs/artemis-financial.log
+
+# Management endpoints (for monitoring)
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+      base-path: /actuator
+  endpoint:
+    health:
+      show-details: when-authorized
+  security:
+    enabled: true
+
+# Application Information
+info:
+  app:
+    name: Artemis Financial Security Starter
+    description: Production-ready Spring Boot starter with comprehensive security hardening
+    version: 1.0.0
+    encoding: UTF-8
+    java:
+      version: ${java.version}

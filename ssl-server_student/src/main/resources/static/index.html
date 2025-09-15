@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Artemis Security Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Artemis Security Demo</h1>
+    <div id="tlsStatus" class="pill">Checking TLS…</div>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Quick Links</h2>
+      <p>These open in a new tab and will prompt for login.</p>
+      <div class="links">
+        <a href="/profile" target="_blank">/profile</a>
+        <a href="/hash" target="_blank">/hash</a>
+        <a href="/checksum" target="_blank">/checksum</a>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Try the APIs (with Basic Auth)</h2>
+      <div class="form-row">
+        <label>Username</label>
+        <input id="u" placeholder="user or admin" />
+      </div>
+      <div class="form-row">
+        <label>Password</label>
+        <input id="p" type="password" placeholder="paste password" />
+      </div>
+      <div class="form-row">
+        <label>Text</label>
+        <input id="t" placeholder="type something to hash/checksum" />
+      </div>
+      <div class="btn-row">
+        <button id="btnProfile">GET /profile</button>
+        <button id="btnHash">GET /hash</button>
+        <button id="btnChecksum">GET /checksum</button>
+      </div>
+      <pre id="out" class="output">// results appear here</pre>
+    </section>
+
+    <section class="card">
+      <h2>Security Headers (live)</h2>
+      <pre id="headersBox" class="output">// header results appear here</pre>
+    </section>
+
+    <section class="card">
+      <h2>What to Look For</h2>
+      <ul>
+        <li><strong>HTTPS</strong> lock icon (self-signed is fine in dev).</li>
+        <li><strong>Auth</strong> prompts or 401s if creds are wrong.</li>
+        <li><strong>Hashes</strong> / checksums returned by the endpoints.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <small>TLS, headers, and auth are enabled for demo security.</small>
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>

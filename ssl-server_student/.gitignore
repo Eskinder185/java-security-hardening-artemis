@@ -29,3 +29,9 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Security/Dev Artifacts ###
+*.p12
+*.jks
+reports/
+!reports/.gitkeep

@@ -1,0 +1,281 @@
+2025-09-14 16:10:20 [main] INFO  c.s.s.SslServerApplicationTests - Starting SslServerApplicationTests using Java 17.0.16 on Eskinder with PID 14292 (started by eskew in C:\Users\eskew\github\java-security-hardening-artemis\ssl-server_student)
+2025-09-14 16:10:20 [main] DEBUG c.s.s.SslServerApplicationTests - Running with Spring Boot v2.7.18, Spring v5.3.31
+2025-09-14 16:10:20 [main] INFO  c.s.s.SslServerApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-09-14 16:10:21 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 66e412d9-b70b-4582-8c0b-757efeaba8ce
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-09-14 16:10:21 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@41fa769c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@40113163, org.springframework.security.web.context.SecurityContextPersistenceFilter@36d33f4, org.springframework.security.web.header.HeaderWriterFilter@46dcbeab, org.springframework.security.web.csrf.CsrfFilter@6968bcec, org.springframework.security.web.authentication.logout.LogoutFilter@3d24420b, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@78fe204a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@550e9be6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@fa5f81c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@71a3e05c, org.springframework.security.web.session.SessionManagementFilter@65cf4d6d, org.springframework.security.web.access.ExceptionTranslationFilter@2ead6ba4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4ed5a1b0]
+2025-09-14 16:10:22 [main] INFO  c.s.s.SslServerApplicationTests - Started SslServerApplicationTests in 2.149 seconds (JVM running for 2.732)
+2025-09-14 16:10:36 [main] INFO  c.s.sslserver.SslServerApplication - Starting SslServerApplication using Java 17.0.16 on Eskinder with PID 19212 (C:\Users\eskew\github\java-security-hardening-artemis\ssl-server_student\target\classes started by eskew in C:\Users\eskew\github\java-security-hardening-artemis\ssl-server_student)
+2025-09-14 16:10:36 [main] DEBUG c.s.sslserver.SslServerApplication - Running with Spring Boot v2.7.18, Spring v5.3.31
+2025-09-14 16:10:36 [main] INFO  c.s.sslserver.SslServerApplication - No active profile set, falling back to 1 default profile: "default"
+2025-09-14 16:10:37 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Could not load key store 'classpath:keystore.p12'
+2025-09-14 16:10:37 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2025-09-14 16:10:37 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Could not load key store 'classpath:keystore.p12'
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:165)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:585)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:409)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289)
+	at com.snhu.sslserver.SslServerApplication.main(SslServerApplication.java:10)
+Caused by: org.springframework.boot.web.server.WebServerException: Could not load key store 'classpath:keystore.p12'
+	at org.springframework.boot.web.embedded.tomcat.SslConnectorCustomizer.configureSslKeyStore(SslConnectorCustomizer.java:154)
+	at org.springframework.boot.web.embedded.tomcat.SslConnectorCustomizer.configureSsl(SslConnectorCustomizer.java:103)
+	at org.springframework.boot.web.embedded.tomcat.SslConnectorCustomizer.customize(SslConnectorCustomizer.java:61)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.customizeSsl(TomcatServletWebServerFactory.java:366)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.customizeConnector(TomcatServletWebServerFactory.java:343)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:203)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:184)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162)
+	... 8 common frames omitted
+Caused by: java.io.FileNotFoundException: class path resource [keystore.p12] cannot be resolved to URL because it does not exist
+	at org.springframework.util.ResourceUtils.getURL(ResourceUtils.java:137)
+	at org.springframework.boot.web.embedded.tomcat.SslConnectorCustomizer.configureSslKeyStore(SslConnectorCustomizer.java:151)
+	... 15 common frames omitted
+2025-09-14 16:10:47 [main] INFO  c.s.sslserver.SslServerApplication - Starting SslServerApplication using Java 17.0.16 on Eskinder with PID 23992 (C:\Users\eskew\github\java-security-hardening-artemis\ssl-server_student\target\classes started by eskew in C:\Users\eskew\github\java-security-hardening-artemis\ssl-server_student)
+2025-09-14 16:10:47 [main] DEBUG c.s.sslserver.SslServerApplication - Running with Spring Boot v2.7.18, Spring v5.3.31
+2025-09-14 16:10:47 [main] INFO  c.s.sslserver.SslServerApplication - No active profile set, falling back to 1 default profile: "default"
+2025-09-14 16:10:48 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Could not load key store 'classpath:keystore.p12'
+2025-09-14 16:10:48 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2025-09-14 16:10:48 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Could not load key store 'classpath:keystore.p12'
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:165)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:585)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:409)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289)
+	at com.snhu.sslserver.SslServerApplication.main(SslServerApplication.java:10)
+Caused by: org.springframework.boot.web.server.WebServerException: Could not load key store 'classpath:keystore.p12'
+	at org.springframework.boot.web.embedded.tomcat.SslConnectorCustomizer.configureSslKeyStore(SslConnectorCustomizer.java:154)
+	at org.springframework.boot.web.embedded.tomcat.SslConnectorCustomizer.configureSsl(SslConnectorCustomizer.java:103)
+	at org.springframework.boot.web.embedded.tomcat.SslConnectorCustomizer.customize(SslConnectorCustomizer.java:61)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.customizeSsl(TomcatServletWebServerFactory.java:366)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.customizeConnector(TomcatServletWebServerFactory.java:343)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:203)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:184)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162)
+	... 8 common frames omitted
+Caused by: java.io.FileNotFoundException: class path resource [keystore.p12] cannot be resolved to URL because it does not exist
+	at org.springframework.util.ResourceUtils.getURL(ResourceUtils.java:137)
+	at org.springframework.boot.web.embedded.tomcat.SslConnectorCustomizer.configureSslKeyStore(SslConnectorCustomizer.java:151)
+	... 15 common frames omitted
+2025-09-14 16:11:34 [main] INFO  c.s.sslserver.SslServerApplication - Starting SslServerApplication using Java 17.0.16 on Eskinder with PID 23780 (C:\Users\eskew\github\java-security-hardening-artemis\ssl-server_student\target\classes started by eskew in C:\Users\eskew\github\java-security-hardening-artemis\ssl-server_student)
+2025-09-14 16:11:34 [main] DEBUG c.s.sslserver.SslServerApplication - Running with Spring Boot v2.7.18, Spring v5.3.31
+2025-09-14 16:11:34 [main] INFO  c.s.sslserver.SslServerApplication - No active profile set, falling back to 1 default profile: "default"
+2025-09-14 16:11:35 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8443 (https)
+2025-09-14 16:11:35 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-09-14 16:11:35 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.83]
+2025-09-14 16:11:35 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-09-14 16:11:35 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 691 ms
+2025-09-14 16:11:35 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 19273a83-5213-4db3-84c2-7c1fe9652100
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-09-14 16:11:35 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4d7a64ca, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@76ff68c5, org.springframework.security.web.context.SecurityContextPersistenceFilter@47148f3f, org.springframework.security.web.header.HeaderWriterFilter@16132f21, org.springframework.security.web.csrf.CsrfFilter@41ef1ea2, org.springframework.security.web.authentication.logout.LogoutFilter@f25f48a, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5099c59b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5fcd1c5f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7e7e962d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6418e39e, org.springframework.security.web.session.SessionManagementFilter@67cffead, org.springframework.security.web.access.ExceptionTranslationFilter@62765aec, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@45e6d1e0]
+2025-09-14 16:11:36 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat server
+2025-09-14 16:11:36 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-09-14 16:11:36 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2025-09-14 16:11:36 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat server
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:182)
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:54)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:357)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:156)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:124)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:946)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:594)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:409)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289)
+	at com.snhu.sslserver.SslServerApplication.main(SslServerApplication.java:10)
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat server
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:229)
+	at org.springframework.boot.web.servlet.context.WebServerStartStopLifecycle.start(WebServerStartStopLifecycle.java:43)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:179)
+	... 14 common frames omitted
+Caused by: java.lang.IllegalArgumentException: standardService.connector.startFailed
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:235)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:282)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:213)
+	... 16 common frames omitted
+Caused by: org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1042)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:232)
+	... 18 common frames omitted
+Caused by: java.lang.IllegalArgumentException: the trustAnchors parameter must be non-empty
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.createSSLContext(AbstractJsseEndpoint.java:107)
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.initialiseSsl(AbstractJsseEndpoint.java:71)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:236)
+	at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1332)
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1418)
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:665)
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1039)
+	... 20 common frames omitted
+Caused by: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
+	at java.base/java.security.cert.PKIXParameters.setTrustAnchors(PKIXParameters.java:200)
+	at java.base/java.security.cert.PKIXParameters.<init>(PKIXParameters.java:157)
+	at java.base/java.security.cert.PKIXBuilderParameters.<init>(PKIXBuilderParameters.java:130)
+	at org.apache.tomcat.util.net.SSLUtilBase.getParameters(SSLUtilBase.java:541)
+	at org.apache.tomcat.util.net.SSLUtilBase.getTrustManagers(SSLUtilBase.java:472)
+	at org.apache.tomcat.util.net.SSLUtilBase.createSSLContext(SSLUtilBase.java:268)
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.createSSLContext(AbstractJsseEndpoint.java:105)
+	... 26 common frames omitted
+2025-09-14 16:12:19 [main] INFO  c.s.sslserver.SslServerApplication - Starting SslServerApplication using Java 17.0.16 on Eskinder with PID 41512 (C:\Users\eskew\github\java-security-hardening-artemis\ssl-server_student\target\classes started by eskew in C:\Users\eskew\github\java-security-hardening-artemis\ssl-server_student)
+2025-09-14 16:12:19 [main] DEBUG c.s.sslserver.SslServerApplication - Running with Spring Boot v2.7.18, Spring v5.3.31
+2025-09-14 16:12:19 [main] INFO  c.s.sslserver.SslServerApplication - No active profile set, falling back to 1 default profile: "default"
+2025-09-14 16:12:19 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8443 (https)
+2025-09-14 16:12:19 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-09-14 16:12:19 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.83]
+2025-09-14 16:12:19 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-09-14 16:12:19 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 618 ms
+2025-09-14 16:12:20 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: aa48d2e6-6f37-4210-860d-e538299c2c05
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-09-14 16:12:20 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@64387c17, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7c369270, org.springframework.security.web.context.SecurityContextPersistenceFilter@5ba03c82, org.springframework.security.web.header.HeaderWriterFilter@ebda593, org.springframework.security.web.csrf.CsrfFilter@65f40689, org.springframework.security.web.authentication.logout.LogoutFilter@642a16aa, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@17fede14, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6e60f18, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1cd43562, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@9f86dc3, org.springframework.security.web.session.SessionManagementFilter@640cc04b, org.springframework.security.web.access.ExceptionTranslationFilter@485caa8f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5426cb36]
+2025-09-14 16:12:20 [main] INFO  o.a.t.u.net.NioEndpoint.certificate - Connector [https-jsse-nio-8443], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [file:/C:/Users/eskew/github/java-security-hardening-artemis/ssl-server_student/target/classes/keystore.p12] using alias [artemis-dev] with trust store [null]
+2025-09-14 16:12:20 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8443 (https) with context path ''
+2025-09-14 16:12:20 [main] INFO  c.s.sslserver.SslServerApplication - Started SslServerApplication in 1.57 seconds (JVM running for 1.746)
+2025-09-14 16:16:59 [main] INFO  c.s.sslserver.SslServerApplication - Starting SslServerApplication using Java 11.0.28 on Eskinder with PID 43920 (C:\Users\eskew\github\java-security-hardening-artemis\ssl-server_student\target\classes started by eskew in C:\Users\eskew\github\java-security-hardening-artemis\ssl-server_student)
+2025-09-14 16:16:59 [main] DEBUG c.s.sslserver.SslServerApplication - Running with Spring Boot v2.7.18, Spring v5.3.31
+2025-09-14 16:16:59 [main] INFO  c.s.sslserver.SslServerApplication - No active profile set, falling back to 1 default profile: "default"
+2025-09-14 16:16:59 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8443 (https)
+2025-09-14 16:16:59 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-09-14 16:16:59 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.83]
+2025-09-14 16:16:59 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-09-14 16:16:59 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 675 ms
+2025-09-14 16:16:59 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 2502cda7-38b9-4f19-9ebd-b3104774756b
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-09-14 16:16:59 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2a2dc0a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3a00b15d, org.springframework.security.web.context.SecurityContextPersistenceFilter@2349f14d, org.springframework.security.web.header.HeaderWriterFilter@4684240f, org.springframework.security.web.csrf.CsrfFilter@ca8ef3a, org.springframework.security.web.authentication.logout.LogoutFilter@6435fa1c, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7412a438, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1dcedc93, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@706ddbc8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@36ef1d65, org.springframework.security.web.session.SessionManagementFilter@468e8565, org.springframework.security.web.access.ExceptionTranslationFilter@19bedeb8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4bc59b27]
+2025-09-14 16:17:00 [main] INFO  o.a.t.u.net.NioEndpoint.certificate - Connector [https-jsse-nio-8443], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [file:/C:/Users/eskew/github/java-security-hardening-artemis/ssl-server_student/target/classes/keystore.p12] using alias [artemis-dev] with trust store [null]
+2025-09-14 16:17:00 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8443 (https) with context path ''
+2025-09-14 16:17:00 [main] INFO  c.s.sslserver.SslServerApplication - Started SslServerApplication in 1.619 seconds (JVM running for 1.8)
+2025-09-14 16:19:19 [https-jsse-nio-8443-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-14 16:19:19 [https-jsse-nio-8443-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-09-14 16:19:19 [https-jsse-nio-8443-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-09-14 16:24:30 [main] INFO  c.s.sslserver.SslServerApplication - Starting SslServerApplication using Java 11.0.28 on Eskinder with PID 40404 (C:\Users\eskew\github\java-security-hardening-artemis\ssl-server_student\target\classes started by eskew in C:\Users\eskew\github\java-security-hardening-artemis\ssl-server_student)
+2025-09-14 16:24:30 [main] DEBUG c.s.sslserver.SslServerApplication - Running with Spring Boot v2.7.18, Spring v5.3.31
+2025-09-14 16:24:30 [main] INFO  c.s.sslserver.SslServerApplication - No active profile set, falling back to 1 default profile: "default"
+2025-09-14 16:24:31 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8443 (https)
+2025-09-14 16:24:31 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-09-14 16:24:31 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.83]
+2025-09-14 16:24:31 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-09-14 16:24:31 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 653 ms
+2025-09-14 16:24:31 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 556db8e8-e9ba-4cf2-92b3-dbf06b8d96e1
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-09-14 16:24:31 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@71179b6f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@13bdf540, org.springframework.security.web.context.SecurityContextPersistenceFilter@6fc0bbc6, org.springframework.security.web.header.HeaderWriterFilter@1b90fee4, org.springframework.security.web.csrf.CsrfFilter@22dc59b2, org.springframework.security.web.authentication.logout.LogoutFilter@77d381e6, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1e225820, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@144ab983, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6397248c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@526e8108, org.springframework.security.web.session.SessionManagementFilter@716185fe, org.springframework.security.web.access.ExceptionTranslationFilter@6975fb1c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3e39baf0]
+2025-09-14 16:24:31 [main] INFO  o.a.t.u.net.NioEndpoint.certificate - Connector [https-jsse-nio-8443], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [file:/C:/Users/eskew/github/java-security-hardening-artemis/ssl-server_student/target/classes/keystore.p12] using alias [artemis-dev] with trust store [null]
+2025-09-14 16:24:31 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8443 (https) with context path ''
+2025-09-14 16:24:31 [main] INFO  c.s.sslserver.SslServerApplication - Started SslServerApplication in 1.51 seconds (JVM running for 1.681)
+2025-09-14 16:25:48 [https-jsse-nio-8443-exec-5] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-14 16:25:48 [https-jsse-nio-8443-exec-5] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-09-14 16:25:48 [https-jsse-nio-8443-exec-5] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-09-14 16:25:49 [https-jsse-nio-8443-exec-5] WARN  o.a.c.util.SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [151] milliseconds.
+2025-09-14 16:29:53 [main] INFO  c.s.sslserver.SslServerApplication - Starting SslServerApplication using Java 11.0.28 on Eskinder with PID 39684 (C:\Users\eskew\github\java-security-hardening-artemis\ssl-server_student\target\classes started by eskew in C:\Users\eskew\github\java-security-hardening-artemis\ssl-server_student)
+2025-09-14 16:29:53 [main] DEBUG c.s.sslserver.SslServerApplication - Running with Spring Boot v2.7.18, Spring v5.3.31
+2025-09-14 16:29:53 [main] INFO  c.s.sslserver.SslServerApplication - No active profile set, falling back to 1 default profile: "default"
+2025-09-14 16:29:54 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8443 (https)
+2025-09-14 16:29:54 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-09-14 16:29:54 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.83]
+2025-09-14 16:29:54 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-09-14 16:29:54 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 627 ms
+2025-09-14 16:29:54 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 7f2f5747-74ae-4cae-8f60-0d975521a3d7
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-09-14 16:29:54 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@60743cdb, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@c02670f, org.springframework.security.web.context.SecurityContextPersistenceFilter@2cca611f, org.springframework.security.web.header.HeaderWriterFilter@6ea246af, org.springframework.security.web.csrf.CsrfFilter@4214ae8f, org.springframework.security.web.authentication.logout.LogoutFilter@47acd13b, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@14168e1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@706ddbc8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@25be445f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@71179b6f, org.springframework.security.web.session.SessionManagementFilter@7edb6fca, org.springframework.security.web.access.ExceptionTranslationFilter@4684240f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3332c7a5]
+2025-09-14 16:29:55 [main] INFO  o.a.t.u.net.NioEndpoint.certificate - Connector [https-jsse-nio-8443], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [file:/C:/Users/eskew/github/java-security-hardening-artemis/ssl-server_student/target/classes/keystore.p12] using alias [artemis-dev] with trust store [null]
+2025-09-14 16:29:55 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8443 (https) with context path ''
+2025-09-14 16:29:55 [main] INFO  c.s.sslserver.SslServerApplication - Started SslServerApplication in 1.438 seconds (JVM running for 1.603)
+2025-09-14 16:30:03 [https-jsse-nio-8443-exec-6] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-14 16:30:03 [https-jsse-nio-8443-exec-6] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-09-14 16:30:03 [https-jsse-nio-8443-exec-6] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-09-14 16:31:48 [main] INFO  c.s.sslserver.SslServerApplication - Starting SslServerApplication using Java 11.0.28 on Eskinder with PID 23788 (C:\Users\eskew\github\java-security-hardening-artemis\ssl-server_student\target\classes started by eskew in C:\Users\eskew\github\java-security-hardening-artemis\ssl-server_student)
+2025-09-14 16:31:48 [main] DEBUG c.s.sslserver.SslServerApplication - Running with Spring Boot v2.7.18, Spring v5.3.31
+2025-09-14 16:31:48 [main] INFO  c.s.sslserver.SslServerApplication - No active profile set, falling back to 1 default profile: "default"
+2025-09-14 16:31:49 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8443 (https)
+2025-09-14 16:31:49 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-09-14 16:31:49 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.83]
+2025-09-14 16:31:49 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-09-14 16:31:49 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 640 ms
+2025-09-14 16:31:49 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@71179b6f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@13bdf540, org.springframework.security.web.context.SecurityContextPersistenceFilter@6fc0bbc6, org.springframework.security.web.header.HeaderWriterFilter@1b90fee4, org.springframework.security.web.csrf.CsrfFilter@22dc59b2, org.springframework.security.web.authentication.logout.LogoutFilter@77d381e6, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1e225820, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@144ab983, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6397248c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@526e8108, org.springframework.security.web.session.SessionManagementFilter@716185fe, org.springframework.security.web.access.ExceptionTranslationFilter@6975fb1c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3e39baf0]
+2025-09-14 16:31:50 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8443 is already in use
+2025-09-14 16:31:50 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-09-14 16:31:50 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2025-09-14 16:31:50 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8443 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8443 or configure this application to listen on another port.
+
+2025-09-14 16:58:32 [main] INFO  c.s.s.SslServerApplicationTests - Starting SslServerApplicationTests using Java 17.0.16 on Eskinder with PID 35576 (started by eskew in C:\Users\eskew\github\java-security-hardening-artemis\ssl-server_student)
+2025-09-14 16:58:32 [main] DEBUG c.s.s.SslServerApplicationTests - Running with Spring Boot v2.7.18, Spring v5.3.31
+2025-09-14 16:58:32 [main] INFO  c.s.s.SslServerApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-09-14 16:58:33 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2b38b1f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1d50a7ca, org.springframework.security.web.context.SecurityContextPersistenceFilter@df921b1, org.springframework.security.web.header.HeaderWriterFilter@176555c, org.springframework.security.web.authentication.logout.LogoutFilter@17410c07, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5dc0ff7d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3902bd2c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@18137eab, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@51ab1ee3, org.springframework.security.web.session.SessionManagementFilter@60d6fdd4, org.springframework.security.web.access.ExceptionTranslationFilter@2a334bac, org.springframework.security.web.access.intercept.AuthorizationFilter@1b2df3aa]
+2025-09-14 16:58:33 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2025-09-14 16:58:33 [main] INFO  c.s.s.SslServerApplicationTests - Started SslServerApplicationTests in 1.937 seconds (JVM running for 2.569)
+2025-09-14 17:03:18 [https-jsse-nio-8443-exec-3] WARN  o.a.c.util.SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [168] milliseconds.
+2025-09-14 17:11:35 [main] INFO  c.s.s.SslServerApplicationTests - Starting SslServerApplicationTests using Java 17.0.16 on Eskinder with PID 39972 (started by eskew in C:\Users\eskew\github\java-security-hardening-artemis\ssl-server_student)
+2025-09-14 17:11:35 [main] DEBUG c.s.s.SslServerApplicationTests - Running with Spring Boot v2.7.18, Spring v5.3.31
+2025-09-14 17:11:35 [main] INFO  c.s.s.SslServerApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-09-14 17:11:36 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4337afd, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1d02af26, org.springframework.security.web.context.SecurityContextPersistenceFilter@42f85fa4, org.springframework.security.web.header.HeaderWriterFilter@45ab3bdd, org.springframework.security.web.authentication.logout.LogoutFilter@39f5b723, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@642a16aa, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@696db620, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2ceee4b6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3fa7df1, org.springframework.security.web.session.SessionManagementFilter@6a1ef65c, org.springframework.security.web.access.ExceptionTranslationFilter@3e1fd62b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@310ed6b4]
+2025-09-14 17:11:36 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2025-09-14 17:11:37 [main] INFO  c.s.s.SslServerApplicationTests - Started SslServerApplicationTests in 1.825 seconds (JVM running for 2.442)
+2025-09-14 23:07:26 [main] INFO  c.s.sslserver.SslServerApplication - Starting SslServerApplication using Java 11.0.28 on Eskinder with PID 21508 (C:\Users\eskew\github\java-security-hardening-artemis\ssl-server_student\target\classes started by eskew in C:\Users\eskew\github\java-security-hardening-artemis\ssl-server_student)
+2025-09-14 23:07:26 [main] DEBUG c.s.sslserver.SslServerApplication - Running with Spring Boot v2.7.18, Spring v5.3.31
+2025-09-14 23:07:26 [main] INFO  c.s.sslserver.SslServerApplication - No active profile set, falling back to 1 default profile: "default"
+2025-09-14 23:07:27 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8443 (https)
+2025-09-14 23:07:27 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-09-14 23:07:27 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.83]
+2025-09-14 23:07:27 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-09-14 23:07:27 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 805 ms
+2025-09-14 23:07:27 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6ac4c3f7, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7412a438, org.springframework.security.web.context.SecurityContextPersistenceFilter@327e5be5, org.springframework.security.web.header.HeaderWriterFilter@22dc59b2, org.springframework.security.web.authentication.logout.LogoutFilter@25f61c2c, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@ec7b5de, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6ea246af, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4cc7d00d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1e3ff233, org.springframework.security.web.session.SessionManagementFilter@7f287b98, org.springframework.security.web.access.ExceptionTranslationFilter@17043b04, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5529ff44]
+2025-09-14 23:07:27 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2025-09-14 23:07:28 [main] INFO  o.a.t.u.net.NioEndpoint.certificate - Connector [https-jsse-nio-8443], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [file:/C:/Users/eskew/github/java-security-hardening-artemis/ssl-server_student/target/classes/keystore.p12] using alias [artemis-dev] with trust store [null]
+2025-09-14 23:07:28 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8443 (https) with context path ''
+2025-09-14 23:07:28 [main] INFO  c.s.sslserver.SslServerApplication - Started SslServerApplication in 1.861 seconds (JVM running for 2.063)
