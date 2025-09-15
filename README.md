@@ -8,16 +8,16 @@ Windows (PowerShell):
 
 cd ssl-server_student
 .\mvnw.cmd spring-boot:run
-# open: https://localhost:8443
-# login: user / <password printed in console>
+ open: https://localhost:8443
+ login: user / <password printed in console>
 
 
 macOS/Linux:
 
 cd ssl-server_student
 ./mvnw spring-boot:run
-# open: https://localhost:8443
-# login: user / <password printed in console>
+ open: https://localhost:8443
+ login: user / <password printed in console>
 
 
 Dev uses a self-signed cert. Your browser will warn — that’s expected.
