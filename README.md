@@ -22,4 +22,4 @@ cd ssl-server_student
 #   https://localhost:8443
 # login:
 #   user / <password printed in console>
-<img width="2507" height="1227" alt="image" src="https://github.com/user-attachments/assets/54a38c2d-04b4-44d5-9034-1ff376536d16" />
+
